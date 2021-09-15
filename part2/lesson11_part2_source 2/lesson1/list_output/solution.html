@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for p in phones %}
+<ul>
+    <li>{{ p.name }}</li>
+    <li>{{ p.mail }}</li>
+    <li>{{ p.phone }}</li>
+</ul>
+{% endfor %}
+</body>
+</html>
