@@ -1,0 +1,17 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Skypro. Урок 11. Часть 1</title>
+</head>
+<body>
+You can use the following proxy servers:
+{% for c, pl in proxy_servers.items() %}
+    <li>{{ c }}
+        <ul>
+            {% for p in pl %}
+            <li>{{ p }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+</body>

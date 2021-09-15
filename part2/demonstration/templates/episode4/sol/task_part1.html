@@ -1,0 +1,17 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="demo.css"/>
+    <title>Skypro. Урок 11. Часть 1</title>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <ul>
+            {% for skill in data %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>

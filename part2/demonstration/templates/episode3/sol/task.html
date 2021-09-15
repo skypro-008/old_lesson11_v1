@@ -1,0 +1,67 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Skypro. Урок 11. Часть 1</title>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        {% if dataA.is_published and dataA.offers == 0 %}
+        <div class="resume-status">
+            - ваше резюме размещено. Подождите немного и кто то обязательно его оценит!
+        </div>
+        {% elif dataA.is_published and dataA.offers > 0 %}
+        <div class="resume-otklik">
+            - У вас есть {{ dataA.offers }} откликов, скорее посмотрите их
+        </div>
+        <button type="button">Посмотреть отклики</button>
+        {% else %}
+        <div class="resume-no">
+            - вы еще не разместили резюме и не можете получать отклики компаний
+        </div>
+        {% endif %}
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<div class="container">
+    <div class="card">
+        {% if dataB.is_published and dataB.offers == 0 %}
+            <div class="resume-status">
+                - ваше резюме размещено. Подождите немного и кто то обязательно его оценит!
+            </div>
+        {% elif dataB.is_published and dataB.offers > 0 %}
+            <div class="resume-otklik">
+                - У вас есть {{ dataB.offers }} откликов, скорее посмотрите их
+            </div>
+            <button type="button">Посмотреть отклики</button>
+        {% else %}
+            <div class="resume-no">
+                - вы еще не разместили резюме и не можете получать отклики компаний
+            </div>
+        {% endif %}
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<div class="container">
+    <div class="card">
+        {% if dataC.is_published and dataC.offers == 0 %}
+            <div class="resume-status">
+                - ваше резюме размещено. Подождите немного и кто то обязательно его оценит!
+            </div>
+        {% elif dataC.is_published and dataC.offers > 0 %}
+            <div class="resume-otklik">
+                - У вас есть {{ dataC.offers }} откликов, скорее посмотрите их
+            </div>
+            <button type="button">Посмотреть отклики</button>
+        {% else %}
+            <div class="resume-no">
+                - вы еще не разместили резюме и не можете получать отклики компаний
+            </div>
+        {% endif %}
+    </div>
+</div>
+</body>
