@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if user.blocked %}
+You have been blocked at {{ user.blocked_at }} for {{ user.unblock_period }}.
+{% else %}
+Choose your prize:
+{% for p in prices %}
+<div class="card">
+    <div class="prize">
+        <div class="
+      {% if p > 1000 %}
+        expensive_price
+      {% elif p < 500 %}
+        normal_price
+      {% else %}
+        default_price
+      {% endif %}">
+            {{ prize_name }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+</body>
+</html>
